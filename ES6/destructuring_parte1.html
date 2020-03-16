@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+		<script type="text/babel">
+
+			//destructuring
+
+			let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+			//let a = frutas[0]
+
+			let [a, b, , c, e = 'Banana'] = frutas
+			//só é possível atribuir um valor quando um índice não existe
+
+			console.log(a, b, c, e)
+
+			//Outro exemplo
+			let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
+			let [, [,n2]] = coisas
+
+			console.log(n2)
+
+			;
+		</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+</html>

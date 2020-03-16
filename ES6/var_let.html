@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+		<script type="text/babel">
+			
+			//3 escopos: global, função e bloco
+
+			var serie = 'Friends'
+
+			function x(){
+
+				var serie = 'Game Of Thrones'
+
+				//dentro do escopo de função
+				console.log(serie)
+
+				if(true){
+					//dentro do escopo de bloco
+					console.log(serie)
+
+				}
+			}
+
+			x()
+
+			if(true){
+				// dentro do escopo de bloco no mesmo nível do escopo de função
+				console.log(serie)
+			}
+
+
+			// Preservando o escopo de bloco com o let
+
+			let serie2 = 'Lasa de Papel'
+
+			if(true){
+				let serie = 'The Walking Dead'
+				let serie2 = 'The Walking Dead'
+			}
+
+			console.log("usando let: "+serie)
+			console.log("usando let novamente: "+serie2)
+
+		</script>
+	</head>
+	<body>
+		<div id="output"></div>
+	</body>
+</html>
