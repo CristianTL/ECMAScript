@@ -66,10 +66,30 @@ function cadastrarDespesa(){
 	if(despesa.validarDados()){
 		bd.gravar(despesa)
 		//dialog de sucesso
-		$('#sucessoGravacao').modal('show')
+		$('#modalRegistraDespesa').modal('show')
+		$('#exampleModalLabel')
+			.html('Sucesso na gravação')
+			.closest('div')
+			.removeClass('text-danger')
+			.addClass('text-success')
+		$('.modal-footer')
+			.find('button')
+			.html('Voltar')
+			.removeClass('btn-danger')
+			.addClass('btn-success')
 	} else {
 		// dialog de erro
-		$('#erroGravacao').modal('show')
+		$('#modalRegistraDespesa').modal('show')
+		$('#exampleModalLabel')
+			.html('Atenção: Erro na gravação')
+			.closest('div')
+			.removeClass('text-success')
+			.addClass('text-danger')
+		$('.modal-footer')
+			.find('button')
+			.html('Voltar e corrigir')
+			.removeClass('btn-success')
+			.addClass('btn-danger')
 	}
 	
 
