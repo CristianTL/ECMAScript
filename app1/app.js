@@ -102,6 +102,14 @@ function cadastrarDespesa(){
 			.html('Voltar')
 			.removeClass('btn-danger')
 			.addClass('btn-success')
+
+		ano.value = ''
+		mes.value = ''
+		dia.value = ''
+		tipo.value = ''
+		descricao.value = ''
+		valor.value = ''
+		
 	} else {
 		// dialog de erro
 		$('#modalRegistraDespesa').modal('show')
